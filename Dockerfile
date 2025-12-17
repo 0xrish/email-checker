@@ -5,12 +5,12 @@ FROM apify/actor-node:22 AS builder
 
 # Install curl and other dependencies needed for Rust installation
 USER root
-RUN apt-get update && apt-get install -y \
+RUN apk add --no-cache \
     curl \
-    build-essential \
-    pkg-config \
-    libssl-dev \
-    && rm -rf /var/lib/apt/lists/*
+    build-base \
+    pkgconfig \
+    openssl-dev \
+    openssl-libs-static
 USER myuser
 
 # Install Rust and Cargo for building the native addon

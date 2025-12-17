@@ -7,7 +7,7 @@
             "title": "Emails to verify",
             "type": "array",
             "description": "List of email addresses to verify using the native Rust backend.",
-            "editor": "stringList",
+            "editor": "select",
             "items": {
                 "type": "string",
                 "format": "email"

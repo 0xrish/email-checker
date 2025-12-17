@@ -23,38 +23,6 @@
             "type": "string",
             "description": "Optional hostname to use in SMTP HELO/EHLO command.",
             "editor": "textfield"
-        },
-        "proxy": {
-            "title": "Optional SOCKS5 proxy configuration",
-            "type": "object",
-            "description": "Proxy configuration for email verification.",
-            "properties": {
-                "host": {
-                    "type": "string",
-                    "title": "Host",
-                    "description": "SOCKS5 proxy hostname or IP address.",
-                    "editor": "textfield"
-                },
-                "port": {
-                    "type": "integer",
-                    "title": "Port",
-                    "description": "SOCKS5 proxy port.",
-                    "default": 1080,
-                    "editor": "number"
-                },
-                "username": {
-                    "type": "string",
-                    "title": "Username",
-                    "description": "Optional username for proxy authentication.",
-                    "editor": "textfield"
-                },
-                "password": {
-                    "type": "string",
-                    "title": "Password",
-                    "description": "Optional password for proxy authentication.",
-                    "editor": "textfield"
-                }
-            }
         }
     },
     "required": ["emails"]

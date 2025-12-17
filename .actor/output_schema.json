@@ -4,46 +4,55 @@
     "description": "Output schema for email verification results stored in the default dataset",
     "properties": {
         "email": {
+            "type": "string",
             "title": "Email Address",
             "description": "The email address that was verified",
             "template": "{{links.apiDefaultDatasetUrl}}/items"
         },
         "input": {
+            "type": "string",
             "title": "Input Email",
             "description": "The original email address input",
             "template": "{{links.apiDefaultDatasetUrl}}/items"
         },
         "is_reachable": {
+            "type": "string",
             "title": "Reachability Status",
             "description": "Overall reachability status: safe, risky, invalid, or unknown",
             "template": "{{links.apiDefaultDatasetUrl}}/items"
         },
         "misc": {
+            "type": "object",
             "title": "Miscellaneous Details",
             "description": "Miscellaneous information about the email address (disposable, role account, B2C, gravatar, haveibeenpwned)",
             "template": "{{links.apiDefaultDatasetUrl}}/items"
         },
         "mx": {
+            "type": "object",
             "title": "MX Records Details",
             "description": "DNS MX records information (accepts_mail, records)",
             "template": "{{links.apiDefaultDatasetUrl}}/items"
         },
         "smtp": {
+            "type": "object",
             "title": "SMTP Details",
             "description": "SMTP connection and verification details (can_connect_smtp, is_deliverable, is_catch_all, has_full_inbox, is_disabled)",
             "template": "{{links.apiDefaultDatasetUrl}}/items"
         },
         "syntax": {
+            "type": "object",
             "title": "Syntax Details",
             "description": "Email address syntax validation details (domain, username, is_valid_syntax, normalized_email, suggestion)",
             "template": "{{links.apiDefaultDatasetUrl}}/items"
         },
         "debug": {
+            "type": "object",
             "title": "Debug Information",
             "description": "Debugging information about the verification process (backend_name, start_time, end_time, duration, smtp)",
             "template": "{{links.apiDefaultDatasetUrl}}/items"
         },
         "error": {
+            "type": "string",
             "title": "Error Message",
             "description": "Error message if verification failed completely",
             "template": "{{links.apiDefaultDatasetUrl}}/items"

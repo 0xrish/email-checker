@@ -3,24 +3,29 @@
     "type": "object",
     "schemaVersion": 1,
     "properties": {
-        "backendUrl": {
-            "title": "check-if-email-exists backend URL",
-            "type": "string",
-            "description": "Base URL of your check-if-email-exists HTTP backend (for example, https://your-backend.example.com or http://localhost:8080)."
-        },
         "emails": {
             "title": "Emails to verify",
             "type": "array",
-            "description": "List of email addresses to verify. Each address will be sent to the backend at POST {backendUrl}/v0/check_email.",
+            "description": "List of email addresses to verify using the native Rust backend.",
             "items": {
                 "type": "string",
                 "format": "email"
             }
         },
+        "from_email": {
+            "title": "From Email",
+            "type": "string",
+            "description": "Optional email address to use in SMTP FROM command"
+        },
+        "hello_name": {
+            "title": "Hello Name",
+            "type": "string",
+            "description": "Optional hostname to use in SMTP EHLO command"
+        },
         "proxy": {
             "title": "Optional SOCKS5 proxy configuration",
             "type": "object",
-            "description": "Proxy configuration passed through to the check-if-email-exists backend as the `proxy` field.",
+            "description": "Proxy configuration for email verification.",
             "properties": {
                 "host": {
                     "type": "string",
@@ -42,7 +47,7 @@
             }
         }
     },
-    "required": ["backendUrl", "emails"]
+    "required": ["emails"]
 }
 
 

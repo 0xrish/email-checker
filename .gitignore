@@ -9,3 +9,13 @@ crawlee_storage
 node_modules
 dist
 tsconfig.tsbuildinfo
+
+# Rust build artifacts
+target/
+**/*.rs.bk
+
+# Native addon build artifacts
+node-addon/target/
+node-addon/*.node
+node-addon/index.node.d.ts
+node-addon/*.d.ts

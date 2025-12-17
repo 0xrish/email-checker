@@ -2,12 +2,13 @@
     "name": "check-if-email-exists-actor",
     "version": "0.0.1",
     "type": "module",
-    "description": "Apify Actor that verifies email addresses using a check-if-email-exists HTTP backend.",
+    "description": "Apify Actor that verifies email addresses using a check-if-email-exists native Rust backend.",
     "engines": {
         "node": ">=20.0.0"
     },
     "dependencies": {
-        "apify": "^3.5.2"
+        "apify": "^3.5.2",
+        "check-if-email-exists-node": "file:./node-addon"
     },
     "devDependencies": {
         "@apify/eslint-config": "^1.0.0",
@@ -25,7 +26,9 @@
         "start": "npm run start:dev",
         "start:prod": "node dist/main.js",
         "start:dev": "tsx src/main.ts",
-        "build": "tsc",
+        "build": "npm run build:addon && tsc",
+        "build:addon": "cd node-addon && cargo build --release",
+        "build:addon:dev": "cd node-addon && cargo build",
         "lint": "eslint",
         "lint:fix": "eslint --fix",
         "format": "prettier --write .",

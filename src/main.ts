@@ -1,4 +1,5 @@
 import { Actor, log } from 'apify';
+import { verifyEmail } from 'check-if-email-exists-node';
 
 interface ProxyConfig {
     host: string;
@@ -9,8 +10,9 @@ interface ProxyConfig {
 
 interface Input {
     emails: string[];
-    backendUrl: string;
     proxy?: ProxyConfig;
+    from_email?: string;
+    hello_name?: string;
 }
 
 interface CheckIfEmailExistsResult {
@@ -28,20 +30,16 @@ await Actor.main(async () => {
     const input = await Actor.getInput<Input>();
 
     if (!input) {
-        throw new Error('Input is missing. Provide "backendUrl" and a non-empty "emails" array.');
+        throw new Error('Input is missing. Provide a non-empty "emails" array.');
     }
 
-    const { emails, backendUrl, proxy } = input;
-
-    if (!backendUrl) {
-        throw new Error('The "backendUrl" field is required in the input.');
-    }
+    const { emails, proxy, from_email, hello_name } = input;
 
     if (!Array.isArray(emails) || emails.length === 0) {
         throw new Error('The "emails" field must be a non-empty array of email strings.');
     }
 
-    log.info(`Starting verification of ${emails.length} email(s) using backend "${backendUrl}".`);
+    log.info(`Starting verification of ${emails.length} email(s) using native Rust backend.`);
 
     const results: Array<{ email: string; result?: CheckIfEmailExistsResult; error?: string }> = [];
 
@@ -50,27 +48,15 @@ await Actor.main(async () => {
         if (!email) continue;
 
         try {
-            const url = new URL('/v0/check_email', backendUrl).toString();
+            const request = {
+                to_email: email,
+                ...(proxy ? { proxy } : {}),
+                ...(from_email ? { from_email } : {}),
+                ...(hello_name ? { hello_name } : {}),
+            };
 
-            const response = await fetch(url, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    to_email: email,
-                    ...(proxy ? { proxy } : {}),
-                }),
-            });
-
-            if (!response.ok) {
-                const text = await response.text().catch(() => '');
-                throw new Error(
-                    `Backend responded with status ${response.status} ${response.statusText} for "${email}": ${text}`,
-                );
-            }
-
-            const result = (await response.json()) as CheckIfEmailExistsResult;
+            const resultJson = await verifyEmail(request);
+            const result = JSON.parse(resultJson) as CheckIfEmailExistsResult;
 
             const item = {
                 email,

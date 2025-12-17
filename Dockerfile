@@ -3,9 +3,20 @@
 # You can also use any other image from Docker Hub.
 FROM apify/actor-node:22 AS builder
 
+# Install curl and other dependencies needed for Rust installation
+USER root
+RUN apt-get update && apt-get install -y \
+    curl \
+    build-essential \
+    pkg-config \
+    libssl-dev \
+    && rm -rf /var/lib/apt/lists/*
+USER myuser
+
 # Install Rust and Cargo for building the native addon
-RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --default-toolchain stable
 ENV PATH="/home/myuser/.cargo/bin:${PATH}"
+RUN rustc --version && cargo --version
 
 # Check preinstalled packages
 RUN npm ls @crawlee/core apify puppeteer playwright
@@ -20,10 +31,16 @@ RUN npm install --include=dev --audit=false
 # Copy Cargo files for the workspace and native addon
 COPY --chown=myuser:myuser Cargo.toml Cargo.lock ./
 COPY --chown=myuser:myuser core ./core
-COPY --chown=myuser:myuser node-addon ./node-addon
+COPY --chown=myuser:myuser node-addon/package.json ./node-addon/
 
-# Build the Rust native addon first
-RUN cd node-addon && cargo build --release
+# Install napi-rs CLI for building the native addon
+RUN cd node-addon && npm install --include=dev
+
+# Copy the rest of node-addon source code
+COPY --chown=myuser:myuser node-addon/ ./node-addon/
+
+# Build the Rust native addon using napi-rs
+RUN cd node-addon && npm run build
 
 # Next, copy the remaining source files using the user set
 # in the base image.
@@ -60,9 +77,11 @@ RUN npm --quiet set progress=false \
 COPY --from=builder --chown=myuser:myuser /usr/src/app/dist ./dist
 
 # Copy the built native addon from builder image
-# Copy the entire target/release directory to preserve the .node file
-RUN mkdir -p node-addon/target/release
-COPY --from=builder --chown=myuser:myuser /usr/src/app/node-addon/target/release/*.node ./node-addon/target/release/ 2>/dev/null || true
+# napi-rs creates platform-specific .node files (e.g., check_if_email_exists_node.linux-x64-gnu.node)
+RUN mkdir -p node-addon
+COPY --from=builder --chown=myuser:myuser /usr/src/app/node-addon/*.node ./node-addon/ || true
+# Also copy the target directory in case it's needed
+COPY --from=builder --chown=myuser:myuser /usr/src/app/node-addon/target/ ./node-addon/target/ || true
 
 # Copy node-addon source files needed at runtime
 COPY --chown=myuser:myuser node-addon/index.ts ./node-addon/

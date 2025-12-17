@@ -1,0 +1,14 @@
+{
+    "actorSpecification": 1,
+    "name": "email-checker",
+    "title": "Email checker using check-if-email-exists",
+    "description": "Verifies email addresses by calling a check-if-email-exists HTTP backend and stores results in the default dataset.",
+    "version": "0.0",
+    "buildTag": "latest",
+    "meta": {
+        "templateId": "ts-standby",
+        "generatedBy": "gpt-5.1"
+    },
+    "dockerfile": "../Dockerfile",
+    "input": "./input_schema.json"
+}

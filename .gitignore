@@ -1,0 +1,29 @@
+# Node.js dependencies and build output
+**/node_modules/
+**/dist/
+npm-debug.log*
+
+# Rust build artifacts and backups
+**/target/
+**/*.rs.bk
+target/
+# Apify / Crawlee local storage
+apify_storage/
+crawlee_storage/
+storage/
+
+# Logs
+*.log
+logs/
+
+# Environment files
+.env
+.env.*
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+

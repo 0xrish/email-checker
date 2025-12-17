@@ -1,0 +1,48 @@
+{
+    "title": "Email checker input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "backendUrl": {
+            "title": "check-if-email-exists backend URL",
+            "type": "string",
+            "description": "Base URL of your check-if-email-exists HTTP backend (for example, https://your-backend.example.com or http://localhost:8080)."
+        },
+        "emails": {
+            "title": "Emails to verify",
+            "type": "array",
+            "description": "List of email addresses to verify. Each address will be sent to the backend at POST {backendUrl}/v0/check_email.",
+            "items": {
+                "type": "string",
+                "format": "email"
+            }
+        },
+        "proxy": {
+            "title": "Optional SOCKS5 proxy configuration",
+            "type": "object",
+            "description": "Proxy configuration passed through to the check-if-email-exists backend as the `proxy` field.",
+            "properties": {
+                "host": {
+                    "type": "string",
+                    "title": "Host"
+                },
+                "port": {
+                    "type": "integer",
+                    "title": "Port",
+                    "default": 1080
+                },
+                "username": {
+                    "type": "string",
+                    "title": "Username"
+                },
+                "password": {
+                    "type": "string",
+                    "title": "Password"
+                }
+            }
+        }
+    },
+    "required": ["backendUrl", "emails"]
+}
+
+

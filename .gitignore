@@ -1,29 +1,11 @@
-# Node.js dependencies and build output
-**/node_modules/
-**/dist/
-npm-debug.log*
+# This file tells Git which files shouldn't be added to source control
 
-# Rust build artifacts and backups
-**/target/
-**/*.rs.bk
-target/
-# Apify / Crawlee local storage
-apify_storage/
-crawlee_storage/
-storage/
-
-# Logs
-*.log
-logs/
-
-# Environment files
-.env
-.env.*
-
-# OS / editor files
-.DS_Store
-Thumbs.db
-.idea/
-.vscode/
-
-
+.idea
+.vscode
+.zed
+storage
+apify_storage
+crawlee_storage
+node_modules
+dist
+tsconfig.tsbuildinfo

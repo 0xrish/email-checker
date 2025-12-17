@@ -22,31 +22,31 @@
             "template": "{{links.apiDefaultDatasetUrl}}/items"
         },
         "misc": {
-            "type": "object",
+            "type": "string",
             "title": "Miscellaneous Details",
             "description": "Miscellaneous information about the email address (disposable, role account, B2C, gravatar, haveibeenpwned)",
             "template": "{{links.apiDefaultDatasetUrl}}/items"
         },
         "mx": {
-            "type": "object",
+            "type": "string",
             "title": "MX Records Details",
             "description": "DNS MX records information (accepts_mail, records)",
             "template": "{{links.apiDefaultDatasetUrl}}/items"
         },
         "smtp": {
-            "type": "object",
+            "type": "string",
             "title": "SMTP Details",
             "description": "SMTP connection and verification details (can_connect_smtp, is_deliverable, is_catch_all, has_full_inbox, is_disabled)",
             "template": "{{links.apiDefaultDatasetUrl}}/items"
         },
         "syntax": {
-            "type": "object",
+            "type": "string",
             "title": "Syntax Details",
             "description": "Email address syntax validation details (domain, username, is_valid_syntax, normalized_email, suggestion)",
             "template": "{{links.apiDefaultDatasetUrl}}/items"
         },
         "debug": {
-            "type": "object",
+            "type": "string",
             "title": "Debug Information",
             "description": "Debugging information about the verification process (backend_name, start_time, end_time, duration, smtp)",
             "template": "{{links.apiDefaultDatasetUrl}}/items"

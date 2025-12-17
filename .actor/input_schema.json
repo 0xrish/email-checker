@@ -7,21 +7,20 @@
             "title": "Emails to verify",
             "type": "array",
             "description": "List of email addresses to verify using the native Rust backend.",
-            "editor": "select",
+            "editor": "json",
             "items": {
-                "type": "string",
-                "format": "email"
+                "type": "string"
             }
         },
         "from_email": {
             "title": "From Email",
             "type": "string",
-            "description": "Optional email address to use in SMTP FROM command"
+            "description": "Optional email address to use in SMTP FROM command."
         },
         "hello_name": {
             "title": "Hello Name",
             "type": "string",
-            "description": "Optional hostname to use in SMTP EHLO command"
+            "description": "Optional hostname to use in SMTP HELO/EHLO command."
         },
         "proxy": {
             "title": "Optional SOCKS5 proxy configuration",
@@ -30,25 +29,27 @@
             "properties": {
                 "host": {
                     "type": "string",
-                    "title": "Host"
+                    "title": "Host",
+                    "description": "SOCKS5 proxy hostname or IP address."
                 },
                 "port": {
                     "type": "integer",
                     "title": "Port",
+                    "description": "SOCKS5 proxy port.",
                     "default": 1080
                 },
                 "username": {
                     "type": "string",
-                    "title": "Username"
+                    "title": "Username",
+                    "description": "Optional username for proxy authentication."
                 },
                 "password": {
                     "type": "string",
-                    "title": "Password"
+                    "title": "Password",
+                    "description": "Optional password for proxy authentication."
                 }
             }
         }
     },
     "required": ["emails"]
 }
-
-

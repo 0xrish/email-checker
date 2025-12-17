@@ -1,234 +1,63 @@
 {
-    "title": "Email Checker Output",
-    "type": "object",
-    "schemaVersion": 1,
     "actorOutputSchemaVersion": 1,
+    "title": "Email Checker Output",
+    "description": "Output schema for email verification results",
+    "type": "object",
     "properties": {
         "email": {
-            "title": "Email Address",
             "type": "string",
+            "title": "Email Address",
             "description": "The email address that was verified",
-            "format": "email"
+            "template": "{{email}}"
         },
         "input": {
-            "title": "Input Email",
             "type": "string",
-            "description": "The original email address input"
+            "title": "Input Email",
+            "description": "The original email address input",
+            "template": "{{input}}"
         },
         "is_reachable": {
-            "title": "Reachability Status",
             "type": "string",
-            "description": "Overall reachability status of the email",
-            "enum": ["safe", "risky", "invalid", "unknown"]
+            "title": "Reachability Status",
+            "description": "Overall reachability status: safe, risky, invalid, or unknown",
+            "enum": ["safe", "risky", "invalid", "unknown"],
+            "template": "{{is_reachable}}"
         },
         "misc": {
+            "type": "object",
             "title": "Miscellaneous Details",
             "description": "Miscellaneous information about the email address",
-            "oneOf": [
-                {
-                    "type": "object",
-                    "properties": {
-                        "is_disposable": {
-                            "type": "boolean",
-                            "description": "Whether this is a disposable email account"
-                        },
-                        "is_role_account": {
-                            "type": "boolean",
-                            "description": "Whether this is a role-based account"
-                        },
-                        "is_b2c": {
-                            "type": "boolean",
-                            "description": "Whether this is a B2C email address"
-                        },
-                        "gravatar_url": {
-                            "type": "string",
-                            "description": "Gravatar URL for this email address",
-                            "format": "uri"
-                        },
-                        "haveibeenpwned": {
-                            "type": "boolean",
-                            "description": "Whether this email was found in HaveIBeenPwned database"
-                        }
-                    }
-                },
-                {
-                    "type": "object",
-                    "properties": {
-                        "error": {
-                            "type": "object",
-                            "description": "Error information if misc check failed"
-                        }
-                    }
-                }
-            ]
+            "template": "{{misc}}"
         },
         "mx": {
+            "type": "object",
             "title": "MX Records Details",
             "description": "DNS MX records information",
-            "oneOf": [
-                {
-                    "type": "object",
-                    "properties": {
-                        "accepts_mail": {
-                            "type": "boolean",
-                            "description": "Whether the domain accepts mail"
-                        },
-                        "records": {
-                            "type": "array",
-                            "description": "List of MX record hostnames",
-                            "items": {
-                                "type": "string"
-                            }
-                        }
-                    }
-                },
-                {
-                    "type": "object",
-                    "properties": {
-                        "error": {
-                            "type": "object",
-                            "description": "Error information if MX lookup failed"
-                        }
-                    }
-                }
-            ]
+            "template": "{{mx}}"
         },
         "smtp": {
+            "type": "object",
             "title": "SMTP Details",
             "description": "SMTP connection and verification details",
-            "oneOf": [
-                {
-                    "type": "object",
-                    "properties": {
-                        "can_connect_smtp": {
-                            "type": "boolean",
-                            "description": "Whether we can connect to the SMTP server"
-                        },
-                        "has_full_inbox": {
-                            "type": "boolean",
-                            "description": "Whether the inbox is full"
-                        },
-                        "is_catch_all": {
-                            "type": "boolean",
-                            "description": "Whether the domain has a catch-all email address"
-                        },
-                        "is_deliverable": {
-                            "type": "boolean",
-                            "description": "Whether emails can be delivered to this address"
-                        },
-                        "is_disabled": {
-                            "type": "boolean",
-                            "description": "Whether the email is blocked or disabled"
-                        }
-                    }
-                },
-                {
-                    "type": "object",
-                    "properties": {
-                        "error": {
-                            "type": "object",
-                            "description": "Error information if SMTP check failed"
-                        },
-                        "description": {
-                            "type": "string",
-                            "description": "Human-readable error description"
-                        }
-                    }
-                }
-            ]
+            "template": "{{smtp}}"
         },
         "syntax": {
-            "title": "Syntax Details",
             "type": "object",
+            "title": "Syntax Details",
             "description": "Email address syntax validation details",
-            "properties": {
-                "address": {
-                    "type": "string",
-                    "description": "The parsed email address",
-                    "format": "email"
-                },
-                "domain": {
-                    "type": "string",
-                    "description": "The domain part of the email address"
-                },
-                "is_valid_syntax": {
-                    "type": "boolean",
-                    "description": "Whether the email has valid syntax"
-                },
-                "username": {
-                    "type": "string",
-                    "description": "The username part of the email address"
-                },
-                "normalized_email": {
-                    "type": "string",
-                    "description": "The normalized form of the email address",
-                    "format": "email"
-                },
-                "suggestion": {
-                    "type": "string",
-                    "description": "Suggested correction if domain is similar to known providers",
-                    "format": "email"
-                }
-            },
-            "required": ["domain", "is_valid_syntax", "username"]
+            "template": "{{syntax}}"
         },
         "debug": {
-            "title": "Debug Information",
             "type": "object",
+            "title": "Debug Information",
             "description": "Debugging information about the verification process",
-            "properties": {
-                "backend_name": {
-                    "type": "string",
-                    "description": "Identifier for the backend service"
-                },
-                "start_time": {
-                    "type": "string",
-                    "description": "ISO 8601 timestamp when verification started",
-                    "format": "date-time"
-                },
-                "end_time": {
-                    "type": "string",
-                    "description": "ISO 8601 timestamp when verification ended",
-                    "format": "date-time"
-                },
-                "duration": {
-                    "description": "Duration of the verification",
-                    "oneOf": [
-                        {
-                            "type": "object",
-                            "properties": {
-                                "secs": {
-                                    "type": "integer"
-                                },
-                                "nanos": {
-                                    "type": "integer"
-                                }
-                            }
-                        },
-                        {
-                            "type": "number",
-                            "description": "Duration in seconds"
-                        }
-                    ]
-                },
-                "smtp": {
-                    "type": "object",
-                    "description": "SMTP debug information",
-                    "properties": {
-                        "verif_method": {
-                            "type": "object",
-                            "description": "Verification method used"
-                        }
-                    }
-                }
-            }
+            "template": "{{debug}}"
         },
         "error": {
-            "title": "Error Message",
             "type": "string",
-            "description": "Error message if verification failed completely"
+            "title": "Error Message",
+            "description": "Error message if verification failed completely",
+            "template": "{{error}}"
         }
-    },
-    "required": ["email"]
+    }
 }
-

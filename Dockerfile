@@ -37,16 +37,14 @@ RUN npm install --include=dev --audit=false
 COPY --chown=myuser:myuser Cargo.toml Cargo.lock ./
 # Copy backend Cargo.toml (required for workspace)
 COPY --chown=myuser:myuser backend/Cargo.toml ./backend/Cargo.toml
-# Create directories and stub Cargo.toml files for cli and sqs
-RUN mkdir -p cli sqs && \
-    echo '[package]' > cli/Cargo.toml && \
-    echo 'name = "cli"' >> cli/Cargo.toml && \
-    echo 'version = "0.0.0"' >> cli/Cargo.toml && \
-    echo 'edition = "2018"' >> cli/Cargo.toml && \
-    echo '[package]' > sqs/Cargo.toml && \
-    echo 'name = "sqs"' >> sqs/Cargo.toml && \
-    echo 'version = "0.0.0"' >> sqs/Cargo.toml && \
-    echo 'edition = "2018"' >> sqs/Cargo.toml
+# Copy cli and sqs Cargo.toml files
+COPY --chown=myuser:myuser cli/Cargo.toml ./cli/Cargo.toml
+COPY --chown=myuser:myuser sqs/Cargo.toml ./sqs/Cargo.toml
+# Create minimal stub source files for backend, cli, and sqs to satisfy Cargo workspace requirements
+RUN mkdir -p backend/src cli/src sqs/src && \
+    echo '// Stub' > backend/src/lib.rs && \
+    echo '// Stub' > cli/src/lib.rs && \
+    echo '// Stub' > sqs/src/lib.rs
 # Copy core (required for native addon)
 COPY --chown=myuser:myuser core ./core
 COPY --chown=myuser:myuser node-addon/package.json ./node-addon/
@@ -66,7 +64,9 @@ COPY --chown=myuser:myuser . ./
 
 # Install all dependencies and build the project.
 # Don't audit to speed up the installation.
-RUN npm run build
+# Skip addon build since it's already built in step 18, just compile TypeScript
+# Use --skipLibCheck to skip type checking of declaration files
+RUN tsc --skipLibCheck --project tsconfig.json
 
 # Create final image
 FROM apify/actor-node:22

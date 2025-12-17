@@ -1,3 +1,6 @@
+// @ts-expect-error - Native addon module, .node file is generated at build time
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import { verifyEmail as verifyEmailNative } from './check_if_email_exists_node.node';
 
 export interface ProxyConfig {

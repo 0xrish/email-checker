@@ -1,13 +1,17 @@
 {
-    "extends": "@apify/tsconfig",
     "compilerOptions": {
         "module": "NodeNext",
         "moduleResolution": "NodeNext",
         "target": "ES2022",
         "outDir": "dist",
-        "noUnusedLocals": false,
+        "strict": true,
+        "esModuleInterop": true,
         "skipLibCheck": true,
-        "lib": ["DOM"]
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true,
+        "lib": ["ES2022"],
+        "types": ["node"]
     },
-    "include": ["./src/**/*"]
+    "include": ["./src/**/*"],
+    "exclude": ["node-addon/**", "node_modules/**", "**/*.node"]
 }

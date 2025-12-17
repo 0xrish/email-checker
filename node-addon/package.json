@@ -4,6 +4,7 @@
   "description": "Node.js native addon for check-if-email-exists",
   "main": "index.ts",
   "types": "index.ts",
+  "type": "module",
   "scripts": {
     "build": "napi build --platform --release",
     "build:debug": "napi build --platform"

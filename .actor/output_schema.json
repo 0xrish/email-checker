@@ -2,6 +2,7 @@
     "title": "Email Checker Output",
     "type": "object",
     "schemaVersion": 1,
+    "actorOutputSchemaVersion": 1,
     "properties": {
         "email": {
             "title": "Email Address",

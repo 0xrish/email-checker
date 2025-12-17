@@ -3,7 +3,7 @@
     "name": "email-checker",
     "title": "Email checker using check-if-email-exists",
     "description": "Verifies email addresses using the check-if-email-exists native Rust backend and stores results in the default dataset.",
-    "version": "0.0",
+    "version": "0.1",
     "buildTag": "latest",
     "meta": {
         "templateId": "ts-standby",

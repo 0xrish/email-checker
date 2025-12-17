@@ -37,12 +37,16 @@ RUN npm install --include=dev --audit=false
 COPY --chown=myuser:myuser Cargo.toml Cargo.lock ./
 # Copy backend Cargo.toml (required for workspace)
 COPY --chown=myuser:myuser backend/Cargo.toml ./backend/Cargo.toml
-# Copy cli and sqs Cargo.toml if they exist, otherwise create stubs
-RUN mkdir -p cli sqs
-COPY --chown=myuser:myuser cli/Cargo.toml ./cli/Cargo.toml 2>/dev/null || \
-    echo '[package]\nname = "cli"\nversion = "0.0.0"\nedition = "2018"' > ./cli/Cargo.toml
-COPY --chown=myuser:myuser sqs/Cargo.toml ./sqs/Cargo.toml 2>/dev/null || \
-    echo '[package]\nname = "sqs"\nversion = "0.0.0"\nedition = "2018"' > ./sqs/Cargo.toml
+# Create directories and stub Cargo.toml files for cli and sqs
+RUN mkdir -p cli sqs && \
+    echo '[package]' > cli/Cargo.toml && \
+    echo 'name = "cli"' >> cli/Cargo.toml && \
+    echo 'version = "0.0.0"' >> cli/Cargo.toml && \
+    echo 'edition = "2018"' >> cli/Cargo.toml && \
+    echo '[package]' > sqs/Cargo.toml && \
+    echo 'name = "sqs"' >> sqs/Cargo.toml && \
+    echo 'version = "0.0.0"' >> sqs/Cargo.toml && \
+    echo 'edition = "2018"' >> sqs/Cargo.toml
 # Copy core (required for native addon)
 COPY --chown=myuser:myuser core ./core
 COPY --chown=myuser:myuser node-addon/package.json ./node-addon/

@@ -34,8 +34,9 @@ COPY --from=cargo-build /usr/src/reacher/target/x86_64-unknown-linux-musl/releas
 COPY --from=cargo-build /usr/src/reacher/backend/docker.sh .
 COPY --from=cargo-build /usr/src/reacher/backend/backend_config.toml .
 
-RUN chown chrome:chrome reacher_backend
-RUN chown chrome:chrome docker.sh
+RUN chown chrome:chrome reacher_backend && \
+    chown chrome:chrome docker.sh && \
+    chmod +x docker.sh
 
 # User chrome was created in zenika/alpine-chrome
 USER chrome

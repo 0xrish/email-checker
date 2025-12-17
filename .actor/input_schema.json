@@ -15,12 +15,14 @@
         "from_email": {
             "title": "From Email",
             "type": "string",
-            "description": "Optional email address to use in SMTP FROM command."
+            "description": "Optional email address to use in SMTP FROM command.",
+            "editor": "textfield"
         },
         "hello_name": {
             "title": "Hello Name",
             "type": "string",
-            "description": "Optional hostname to use in SMTP HELO/EHLO command."
+            "description": "Optional hostname to use in SMTP HELO/EHLO command.",
+            "editor": "textfield"
         },
         "proxy": {
             "title": "Optional SOCKS5 proxy configuration",
@@ -30,23 +32,27 @@
                 "host": {
                     "type": "string",
                     "title": "Host",
-                    "description": "SOCKS5 proxy hostname or IP address."
+                    "description": "SOCKS5 proxy hostname or IP address.",
+                    "editor": "textfield"
                 },
                 "port": {
                     "type": "integer",
                     "title": "Port",
                     "description": "SOCKS5 proxy port.",
-                    "default": 1080
+                    "default": 1080,
+                    "editor": "number"
                 },
                 "username": {
                     "type": "string",
                     "title": "Username",
-                    "description": "Optional username for proxy authentication."
+                    "description": "Optional username for proxy authentication.",
+                    "editor": "textfield"
                 },
                 "password": {
                     "type": "string",
                     "title": "Password",
-                    "description": "Optional password for proxy authentication."
+                    "description": "Optional password for proxy authentication.",
+                    "editor": "textfield"
                 }
             }
         }

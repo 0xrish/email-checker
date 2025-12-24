@@ -5,13 +5,10 @@
     "properties": {
         "emails": {
             "title": "Emails to verify",
-            "type": "array",
-            "description": "List of email addresses to verify. Each address will be validated for syntax, MX records, and SMTP reachability.",
-            "items": {
-                "type": "string",
-                "format": "email"
-            },
-            "minItems": 1
+            "type": "string",
+            "description": "Enter email addresses to verify, one per line.",
+            "editor": "textarea",
+            "prefill": "test@example.com\nuser@gmail.com"
         },
         "backendUrl": {
             "title": "Backend URL (Optional)",

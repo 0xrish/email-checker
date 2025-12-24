@@ -1,0 +1,44 @@
+# configurations
+.idea
+.vscode
+.zed
+
+# crawlee and apify storage folders
+apify_storage
+crawlee_storage
+storage
+
+# installed files
+node_modules
+
+# git folder
+.git
+
+# dist folder (will be built in Docker)
+dist
+
+# Rust build artifacts
+target
+
+# Documentation
+docs
+*.md
+!README.md
+
+# Tests
+tests
+backend/tests
+
+# CI/CD
+.github
+ci
+
+# Environment files
+.env
+.envrc
+
+# Other
+.well-known
+.gitbook.yaml
+rabbitmq
+sqs

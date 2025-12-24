@@ -1,0 +1,67 @@
+{
+    "actorSpecification": 1,
+    "name": "email-checker",
+    "title": "Email Verification & Validation",
+    "description": "Verify email addresses in bulk with SMTP validation, syntax checking, and deliverability analysis. Powered by check-if-email-exists Rust engine.",
+    "version": "1.0",
+    "buildTag": "latest",
+    "meta": {
+        "templateId": "email-checker-rust"
+    },
+    "dockerfile": "../Dockerfile",
+    "input": "./input_schema.json",
+    "storages": {
+        "dataset": {
+            "actorSpecification": 1,
+            "views": {
+                "overview": {
+                    "title": "Email Verification Results",
+                    "transformation": {
+                        "fields": [
+                            "email",
+                            "is_reachable",
+                            "syntax.is_valid_syntax",
+                            "mx.accepts_mail",
+                            "smtp.can_connect_smtp",
+                            "smtp.is_deliverable",
+                            "error"
+                        ]
+                    },
+                    "display": {
+                        "component": "table",
+                        "properties": {
+                            "email": {
+                                "label": "Email",
+                                "format": "text"
+                            },
+                            "is_reachable": {
+                                "label": "Reachable",
+                                "format": "text"
+                            },
+                            "syntax.is_valid_syntax": {
+                                "label": "Valid Syntax",
+                                "format": "boolean"
+                            },
+                            "mx.accepts_mail": {
+                                "label": "MX Accepts Mail",
+                                "format": "boolean"
+                            },
+                            "smtp.can_connect_smtp": {
+                                "label": "SMTP Connected",
+                                "format": "boolean"
+                            },
+                            "smtp.is_deliverable": {
+                                "label": "Deliverable",
+                                "format": "boolean"
+                            },
+                            "error": {
+                                "label": "Error",
+                                "format": "text"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

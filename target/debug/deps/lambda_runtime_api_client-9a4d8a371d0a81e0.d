@@ -1,0 +1,14 @@
+C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\check-if-email-exists\target\debug\deps\liblambda_runtime_api_client-9a4d8a371d0a81e0.rmeta: C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lambda_runtime_api_client-0.11.1\src\lib.rs C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lambda_runtime_api_client-0.11.1\src\error.rs C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lambda_runtime_api_client-0.11.1\src\body\mod.rs C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lambda_runtime_api_client-0.11.1\src\body\channel.rs C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lambda_runtime_api_client-0.11.1\src\body\sender.rs C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lambda_runtime_api_client-0.11.1\src\body\watch.rs C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lambda_runtime_api_client-0.11.1\src\tracing.rs
+
+C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\check-if-email-exists\target\debug\deps\lambda_runtime_api_client-9a4d8a371d0a81e0.d: C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lambda_runtime_api_client-0.11.1\src\lib.rs C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lambda_runtime_api_client-0.11.1\src\error.rs C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lambda_runtime_api_client-0.11.1\src\body\mod.rs C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lambda_runtime_api_client-0.11.1\src\body\channel.rs C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lambda_runtime_api_client-0.11.1\src\body\sender.rs C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lambda_runtime_api_client-0.11.1\src\body\watch.rs C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lambda_runtime_api_client-0.11.1\src\tracing.rs
+
+C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lambda_runtime_api_client-0.11.1\src\lib.rs:
+C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lambda_runtime_api_client-0.11.1\src\error.rs:
+C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lambda_runtime_api_client-0.11.1\src\body\mod.rs:
+C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lambda_runtime_api_client-0.11.1\src\body\channel.rs:
+C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lambda_runtime_api_client-0.11.1\src\body\sender.rs:
+C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lambda_runtime_api_client-0.11.1\src\body\watch.rs:
+C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\lambda_runtime_api_client-0.11.1\src\tracing.rs:
+
+# env-dep:CARGO_PKG_VERSION=0.11.1
+# env-dep:LAMBDA_RUNTIME_USER_AGENT

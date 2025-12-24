@@ -1,0 +1,88 @@
+{
+    "title": "Email Checker Input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "emails": {
+            "title": "Emails to verify",
+            "type": "array",
+            "description": "List of email addresses to verify. Each address will be validated for syntax, MX records, and SMTP reachability.",
+            "editor": "stringList",
+            "items": {
+                "type": "string",
+                "format": "email"
+            },
+            "minItems": 1
+        },
+        "backendUrl": {
+            "title": "Backend URL (Optional)",
+            "type": "string",
+            "description": "Base URL of the check-if-email-exists HTTP backend. Leave empty to use the bundled backend (http://localhost:8080).",
+            "editor": "textfield",
+            "default": "http://localhost:8080"
+        },
+        "concurrency": {
+            "title": "Concurrency",
+            "type": "integer",
+            "description": "Number of emails to verify in parallel. Higher values = faster processing but more resource usage.",
+            "editor": "number",
+            "default": 5,
+            "minimum": 1,
+            "maximum": 50
+        },
+        "retryCount": {
+            "title": "Retry count",
+            "type": "integer",
+            "description": "Number of retry attempts for failed email verifications.",
+            "editor": "number",
+            "default": 2,
+            "minimum": 0,
+            "maximum": 5
+        },
+        "timeout": {
+            "title": "Timeout (seconds)",
+            "type": "integer",
+            "description": "Maximum time to wait for each email verification request.",
+            "editor": "number",
+            "default": 30,
+            "minimum": 5,
+            "maximum": 300
+        },
+        "proxy": {
+            "title": "SOCKS5 Proxy (Optional)",
+            "type": "object",
+            "description": "Optional SOCKS5 proxy configuration for SMTP connections. Useful for bypassing rate limits or accessing restricted networks.",
+            "editor": "json",
+            "properties": {
+                "host": {
+                    "type": "string",
+                    "title": "Host",
+                    "description": "Proxy server hostname or IP address"
+                },
+                "port": {
+                    "type": "integer",
+                    "title": "Port",
+                    "description": "Proxy server port",
+                    "default": 1080
+                },
+                "username": {
+                    "type": "string",
+                    "title": "Username",
+                    "description": "Proxy authentication username (if required)"
+                },
+                "password": {
+                    "type": "string",
+                    "title": "Password",
+                    "description": "Proxy authentication password (if required)"
+                }
+            },
+            "required": [
+                "host",
+                "port"
+            ]
+        }
+    },
+    "required": [
+        "emails"
+    ]
+}

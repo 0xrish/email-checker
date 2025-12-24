@@ -1,0 +1,10 @@
+^C:\USERS\ASUS\ONEDRIVE\DESKTOP\RUNNING NODE\EMAIL-CHECKER\CHECK-IF-EMAIL-EXISTS\TARGET\DEBUG\BUILD\AWS-LC-SYS-EE00373752474F72\OUT\BUILD\CMAKEFILES\C0AB7D5369F7A49312BD6AC4A7D36229\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/asus/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/aws-lc-sys-0.24.0 "-BC:/Users/asus/OneDrive/Desktop/Running Node/email-checker/check-if-email-exists/target/debug/build/aws-lc-sys-ee00373752474f72/out/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/asus/OneDrive/Desktop/Running Node/email-checker/check-if-email-exists/target/debug/build/aws-lc-sys-ee00373752474f72/out/build/AWS_LC_RUST.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

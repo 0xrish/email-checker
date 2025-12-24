@@ -1,0 +1,10 @@
+{
+    "emails": [
+        "test@example.com",
+        "user@gmail.com",
+        "contact@invalid-domain-that-does-not-exist.com"
+    ],
+    "concurrency": 3,
+    "retryCount": 2,
+    "timeout": 30
+}

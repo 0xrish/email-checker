@@ -1,0 +1,511 @@
+warning: profiles for the non root package will be ignored, specify profiles at the workspace root:
+package:   C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\cli\Cargo.toml
+workspace: C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\Cargo.toml
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+   2.881124500s  INFO prepare_target{force=false package_id=check-if-email-exists-cli v0.11.6 (C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\cli) target="check_if_email_exists"}: cargo::core::compiler::fingerprint: fingerprint error for check-if-email-exists-cli v0.11.6 (C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\cli)/Check { test: false }/TargetInner { name: "check_if_email_exists", doc: true, ..: with_path("C:\\Users\\asus\\OneDrive\\Desktop\\Running Node\\email-checker\\email-checker\\cli\\src\\main.rs", Edition2018) }
+   2.881203400s  INFO prepare_target{force=false package_id=check-if-email-exists-cli v0.11.6 (C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\cli) target="check_if_email_exists"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\target\debug\.fingerprint\check-if-email-exists-cli-72bf0bc13873859f\bin-check_if_email_exists`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_path
+   6: git_filter_source_path
+   7: git_filter_source_path
+   8: git_filter_source_path
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   2.916154800s  INFO prepare_target{force=false package_id=openssl v0.10.69 target="openssl"}: cargo::core::compiler::fingerprint: fingerprint error for openssl v0.10.69/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("openssl", ["lib"], "C:\\Users\\asus\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\openssl-0.10.69\\src\\lib.rs", Edition2021) }
+   2.916225300s  INFO prepare_target{force=false package_id=openssl v0.10.69 target="openssl"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\target\debug\.fingerprint\openssl-88139b8be288f7b5\lib-openssl`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_path
+   6: git_filter_source_path
+   7: git_filter_source_path
+   8: git_filter_source_path
+   9: git_filter_source_path
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: <unknown>
+  16: <unknown>
+  17: git_midx_writer_dump
+  18: git_filter_source_repo
+  19: git_midx_writer_dump
+  20: BaseThreadInitThunk
+  21: RtlUserThreadStart
+   2.918193100s  INFO prepare_target{force=false package_id=openssl v0.10.69 target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for openssl v0.10.69/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\asus\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\openssl-0.10.69\\build.rs", Edition2021) }
+   2.918227100s  INFO prepare_target{force=false package_id=openssl v0.10.69 target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\target\debug\.fingerprint\openssl-0274dca6b5c203d0\run-build-script-build-script-build`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_path
+   6: git_filter_source_repo
+   7: git_filter_source_path
+   8: git_filter_source_path
+   9: git_filter_source_path
+  10: git_filter_source_path
+  11: git_filter_source_path
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: <unknown>
+  18: <unknown>
+  19: git_midx_writer_dump
+  20: git_filter_source_repo
+  21: git_midx_writer_dump
+  22: BaseThreadInitThunk
+  23: RtlUserThreadStart
+   2.919910000s  INFO prepare_target{force=false package_id=openssl-sys v0.9.104 target="build-script-main"}: cargo::core::compiler::fingerprint: fingerprint error for openssl-sys v0.9.104/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-main", "C:\\Users\\asus\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\openssl-sys-0.9.104\\build\\main.rs", Edition2021) }
+   2.919981300s  INFO prepare_target{force=false package_id=openssl-sys v0.9.104 target="build-script-main"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\target\debug\.fingerprint\openssl-sys-900ad01ac4c24290\run-build-script-build-script-main`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_path
+   6: git_filter_source_repo
+   7: git_filter_source_path
+   8: git_filter_source_path
+   9: git_filter_source_path
+  10: git_filter_source_path
+  11: git_filter_source_path
+  12: git_filter_source_path
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: git_filter_source_repo
+  17: git_filter_source_repo
+  18: <unknown>
+  19: <unknown>
+  20: git_midx_writer_dump
+  21: git_filter_source_repo
+  22: git_midx_writer_dump
+  23: BaseThreadInitThunk
+  24: RtlUserThreadStart
+   2.921978900s  INFO prepare_target{force=false package_id=openssl-sys v0.9.104 target="openssl_sys"}: cargo::core::compiler::fingerprint: fingerprint error for openssl-sys v0.9.104/Check { test: false }/TargetInner { ..: lib_target("openssl_sys", ["lib"], "C:\\Users\\asus\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\openssl-sys-0.9.104\\src\\lib.rs", Edition2021) }
+   2.922049800s  INFO prepare_target{force=false package_id=openssl-sys v0.9.104 target="openssl_sys"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\target\debug\.fingerprint\openssl-sys-82598b83d74a355a\lib-openssl_sys`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_path
+   6: git_filter_source_path
+   7: git_filter_source_path
+   8: git_filter_source_path
+   9: git_filter_source_path
+  10: git_filter_source_path
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: git_filter_source_repo
+  15: git_filter_source_repo
+  16: <unknown>
+  17: <unknown>
+  18: git_midx_writer_dump
+  19: git_filter_source_repo
+  20: git_midx_writer_dump
+  21: BaseThreadInitThunk
+  22: RtlUserThreadStart
+   2.928385800s  INFO prepare_target{force=false package_id=check-if-email-exists-cli v0.11.6 (C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\cli) target="check_if_email_exists"}: cargo::core::compiler::fingerprint: fingerprint error for check-if-email-exists-cli v0.11.6 (C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\cli)/Check { test: true }/TargetInner { name: "check_if_email_exists", doc: true, ..: with_path("C:\\Users\\asus\\OneDrive\\Desktop\\Running Node\\email-checker\\email-checker\\cli\\src\\main.rs", Edition2018) }
+   2.928429800s  INFO prepare_target{force=false package_id=check-if-email-exists-cli v0.11.6 (C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\cli) target="check_if_email_exists"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\target\debug\.fingerprint\check-if-email-exists-cli-3b03a30e53a23b1d\test-bin-check_if_email_exists`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_path
+   6: git_filter_source_path
+   7: git_filter_source_path
+   8: git_filter_source_path
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   3.115306000s  INFO prepare_target{force=false package_id=reacher_backend v0.11.6 (C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\backend) target="reacher_backend"}: cargo::core::compiler::fingerprint: fingerprint error for reacher_backend v0.11.6 (C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\backend)/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("reacher_backend", ["lib"], "C:\\Users\\asus\\OneDrive\\Desktop\\Running Node\\email-checker\\email-checker\\backend\\src\\lib.rs", Edition2018) }
+   3.115355100s  INFO prepare_target{force=false package_id=reacher_backend v0.11.6 (C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\backend) target="reacher_backend"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\target\debug\.fingerprint\reacher_backend-96b5a2e72033004b\lib-reacher_backend`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_path
+   6: git_filter_source_path
+   7: git_filter_source_path
+   8: git_filter_source_path
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   3.302301000s  INFO prepare_target{force=false package_id=reacher_backend v0.11.6 (C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\backend) target="reacher_backend"}: cargo::core::compiler::fingerprint: fingerprint error for reacher_backend v0.11.6 (C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\backend)/Check { test: true }/TargetInner { name_inferred: true, ..: lib_target("reacher_backend", ["lib"], "C:\\Users\\asus\\OneDrive\\Desktop\\Running Node\\email-checker\\email-checker\\backend\\src\\lib.rs", Edition2018) }
+   3.302382000s  INFO prepare_target{force=false package_id=reacher_backend v0.11.6 (C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\backend) target="reacher_backend"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\target\debug\.fingerprint\reacher_backend-544232ae063d2ba8\test-lib-reacher_backend`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_path
+   6: git_filter_source_path
+   7: git_filter_source_path
+   8: git_filter_source_path
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   3.305354900s  INFO prepare_target{force=false package_id=reacher_backend v0.11.6 (C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\backend) target="prune_db"}: cargo::core::compiler::fingerprint: fingerprint error for reacher_backend v0.11.6 (C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\backend)/Check { test: false }/TargetInner { name: "prune_db", doc: true, ..: with_path("C:\\Users\\asus\\OneDrive\\Desktop\\Running Node\\email-checker\\email-checker\\backend\\src\\bin\\prune_db.rs", Edition2018) }
+   3.305398300s  INFO prepare_target{force=false package_id=reacher_backend v0.11.6 (C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\backend) target="prune_db"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\target\debug\.fingerprint\reacher_backend-9b5e938112736129\bin-prune_db`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_path
+   6: git_filter_source_path
+   7: git_filter_source_path
+   8: git_filter_source_path
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   3.309316200s  INFO prepare_target{force=false package_id=reacher_backend v0.11.6 (C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\backend) target="prune_db"}: cargo::core::compiler::fingerprint: fingerprint error for reacher_backend v0.11.6 (C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\backend)/Check { test: true }/TargetInner { name: "prune_db", doc: true, ..: with_path("C:\\Users\\asus\\OneDrive\\Desktop\\Running Node\\email-checker\\email-checker\\backend\\src\\bin\\prune_db.rs", Edition2018) }
+   3.309408400s  INFO prepare_target{force=false package_id=reacher_backend v0.11.6 (C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\backend) target="prune_db"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\target\debug\.fingerprint\reacher_backend-67f641dead84cff9\test-bin-prune_db`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_path
+   6: git_filter_source_path
+   7: git_filter_source_path
+   8: git_filter_source_path
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   3.311187100s  INFO prepare_target{force=false package_id=reacher_backend v0.11.6 (C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\backend) target="reacher_backend"}: cargo::core::compiler::fingerprint: fingerprint error for reacher_backend v0.11.6 (C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\backend)/Check { test: false }/TargetInner { name: "reacher_backend", doc: true, ..: with_path("C:\\Users\\asus\\OneDrive\\Desktop\\Running Node\\email-checker\\email-checker\\backend\\src\\main.rs", Edition2018) }
+   3.311241300s  INFO prepare_target{force=false package_id=reacher_backend v0.11.6 (C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\backend) target="reacher_backend"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\target\debug\.fingerprint\reacher_backend-2a27d25cf4349f62\bin-reacher_backend`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_path
+   6: git_filter_source_path
+   7: git_filter_source_path
+   8: git_filter_source_path
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   3.313690800s  INFO prepare_target{force=false package_id=reacher_backend v0.11.6 (C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\backend) target="reacher_backend"}: cargo::core::compiler::fingerprint: fingerprint error for reacher_backend v0.11.6 (C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\backend)/Check { test: true }/TargetInner { name: "reacher_backend", doc: true, ..: with_path("C:\\Users\\asus\\OneDrive\\Desktop\\Running Node\\email-checker\\email-checker\\backend\\src\\main.rs", Edition2018) }
+   3.313771800s  INFO prepare_target{force=false package_id=reacher_backend v0.11.6 (C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\backend) target="reacher_backend"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\target\debug\.fingerprint\reacher_backend-20fcd1d7193a86f5\test-bin-reacher_backend`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_path
+   6: git_filter_source_path
+   7: git_filter_source_path
+   8: git_filter_source_path
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   3.319265700s  INFO prepare_target{force=false package_id=reacher_backend v0.11.6 (C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\backend) target="check_email"}: cargo::core::compiler::fingerprint: fingerprint error for reacher_backend v0.11.6 (C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\backend)/Check { test: true }/TargetInner { kind: "test", name: "check_email", benched: false, ..: with_path("C:\\Users\\asus\\OneDrive\\Desktop\\Running Node\\email-checker\\email-checker\\backend\\tests\\check_email.rs", Edition2018) }
+   3.319308700s  INFO prepare_target{force=false package_id=reacher_backend v0.11.6 (C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\backend) target="check_email"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\target\debug\.fingerprint\reacher_backend-ab57e98924889884\test-integration-test-check_email`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_path
+   6: git_filter_source_path
+   7: git_filter_source_path
+   8: git_filter_source_path
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   3.325718100s  INFO prepare_target{force=false package_id=reacher_sqs v0.11.6 (C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\sqs) target="reacher_sqs"}: cargo::core::compiler::fingerprint: fingerprint error for reacher_sqs v0.11.6 (C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\sqs)/Check { test: false }/TargetInner { name: "reacher_sqs", doc: true, ..: with_path("C:\\Users\\asus\\OneDrive\\Desktop\\Running Node\\email-checker\\email-checker\\sqs\\src\\main.rs", Edition2018) }
+   3.325847900s  INFO prepare_target{force=false package_id=reacher_sqs v0.11.6 (C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\sqs) target="reacher_sqs"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\target\debug\.fingerprint\reacher_sqs-50426d192dfbeb75\bin-reacher_sqs`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_path
+   6: git_filter_source_path
+   7: git_filter_source_path
+   8: git_filter_source_path
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   3.329098900s  INFO prepare_target{force=false package_id=reacher_sqs v0.11.6 (C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\sqs) target="reacher_sqs"}: cargo::core::compiler::fingerprint: fingerprint error for reacher_sqs v0.11.6 (C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\sqs)/Check { test: true }/TargetInner { name: "reacher_sqs", doc: true, ..: with_path("C:\\Users\\asus\\OneDrive\\Desktop\\Running Node\\email-checker\\email-checker\\sqs\\src\\main.rs", Edition2018) }
+   3.329179200s  INFO prepare_target{force=false package_id=reacher_sqs v0.11.6 (C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\sqs) target="reacher_sqs"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\target\debug\.fingerprint\reacher_sqs-536cf3864127cb0a\test-bin-reacher_sqs`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_path
+   6: git_filter_source_path
+   7: git_filter_source_path
+   8: git_filter_source_path
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_filter_source_repo
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   Compiling openssl-sys v0.9.104
+warning: openssl-sys@0.9.104: configuring OpenSSL build: Command 'perl' not found. Is perl installed?
+warning: openssl-sys@0.9.104: openssl-src: failed to build OpenSSL from source
+error: failed to run custom build command for `openssl-sys v0.9.104`
+note: To improve backtraces for build dependencies, set the CARGO_PROFILE_DEV_BUILD_OVERRIDE_DEBUG=true environment variable to enable debug information generation.
+
+Caused by:
+  process didn't exit successfully: `C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\email-checker\target\debug\build\openssl-sys-305958a84bbc140b\build-script-main` (exit code: 1)
+  --- stdout
+  cargo:rustc-check-cfg=cfg(osslconf, values("OPENSSL_NO_OCB", "OPENSSL_NO_SM4", "OPENSSL_NO_SEED", "OPENSSL_NO_CHACHA", "OPENSSL_NO_CAST", "OPENSSL_NO_IDEA", "OPENSSL_NO_CAMELLIA", "OPENSSL_NO_RC4", "OPENSSL_NO_BF", "OPENSSL_NO_PSK", "OPENSSL_NO_DEPRECATED_3_0", "OPENSSL_NO_SCRYPT", "OPENSSL_NO_SM3", "OPENSSL_NO_RMD160", "OPENSSL_NO_EC2M", "OPENSSL_NO_OCSP", "OPENSSL_NO_CMS", "OPENSSL_NO_COMP", "OPENSSL_NO_SOCK", "OPENSSL_NO_STDIO", "OPENSSL_NO_EC", "OPENSSL_NO_SSL3_METHOD", "OPENSSL_NO_KRB5", "OPENSSL_NO_TLSEXT", "OPENSSL_NO_SRP", "OPENSSL_NO_RFC3779", "OPENSSL_NO_SHA", "OPENSSL_NO_NEXTPROTONEG", "OPENSSL_NO_ENGINE", "OPENSSL_NO_BUF_FREELISTS"))
+  cargo:rustc-check-cfg=cfg(openssl)
+  cargo:rustc-check-cfg=cfg(libressl)
+  cargo:rustc-check-cfg=cfg(boringssl)
+  cargo:rustc-check-cfg=cfg(libressl250)
+  cargo:rustc-check-cfg=cfg(libressl251)
+  cargo:rustc-check-cfg=cfg(libressl252)
+  cargo:rustc-check-cfg=cfg(libressl261)
+  cargo:rustc-check-cfg=cfg(libressl270)
+  cargo:rustc-check-cfg=cfg(libressl271)
+  cargo:rustc-check-cfg=cfg(libressl273)
+  cargo:rustc-check-cfg=cfg(libressl280)
+  cargo:rustc-check-cfg=cfg(libressl281)
+  cargo:rustc-check-cfg=cfg(libressl291)
+  cargo:rustc-check-cfg=cfg(libressl310)
+  cargo:rustc-check-cfg=cfg(libressl321)
+  cargo:rustc-check-cfg=cfg(libressl332)
+  cargo:rustc-check-cfg=cfg(libressl340)
+  cargo:rustc-check-cfg=cfg(libressl350)
+  cargo:rustc-check-cfg=cfg(libressl360)
+  cargo:rustc-check-cfg=cfg(libressl361)
+  cargo:rustc-check-cfg=cfg(libressl370)
+  cargo:rustc-check-cfg=cfg(libressl380)
+  cargo:rustc-check-cfg=cfg(libressl381)
+  cargo:rustc-check-cfg=cfg(libressl382)
+  cargo:rustc-check-cfg=cfg(libressl390)
+  cargo:rustc-check-cfg=cfg(libressl400)
+  cargo:rustc-check-cfg=cfg(ossl101)
+  cargo:rustc-check-cfg=cfg(ossl102)
+  cargo:rustc-check-cfg=cfg(ossl102f)
+  cargo:rustc-check-cfg=cfg(ossl102h)
+  cargo:rustc-check-cfg=cfg(ossl110)
+  cargo:rustc-check-cfg=cfg(ossl110f)
+  cargo:rustc-check-cfg=cfg(ossl110g)
+  cargo:rustc-check-cfg=cfg(ossl110h)
+  cargo:rustc-check-cfg=cfg(ossl111)
+  cargo:rustc-check-cfg=cfg(ossl111b)
+  cargo:rustc-check-cfg=cfg(ossl111c)
+  cargo:rustc-check-cfg=cfg(ossl111d)
+  cargo:rustc-check-cfg=cfg(ossl300)
+  cargo:rustc-check-cfg=cfg(ossl310)
+  cargo:rustc-check-cfg=cfg(ossl320)
+  cargo:rustc-check-cfg=cfg(ossl330)
+  cargo:rustc-check-cfg=cfg(ossl340)
+  cargo:rerun-if-env-changed=X86_64_PC_WINDOWS_MSVC_OPENSSL_NO_VENDOR
+  X86_64_PC_WINDOWS_MSVC_OPENSSL_NO_VENDOR unset
+  cargo:rerun-if-env-changed=OPENSSL_NO_VENDOR
+  OPENSSL_NO_VENDOR unset
+  cargo:rerun-if-env-changed=X86_64_PC_WINDOWS_MSVC_OPENSSL_CONFIG_DIR
+  X86_64_PC_WINDOWS_MSVC_OPENSSL_CONFIG_DIR unset
+  cargo:rerun-if-env-changed=OPENSSL_CONFIG_DIR
+  OPENSSL_CONFIG_DIR unset
+  running "perl" "./Configure" "--prefix=C:/Users/asus/OneDrive/Desktop/Running Node/email-checker/email-checker/target/debug/build/openssl-sys-900ad01ac4c24290/out/openssl-build/install" "--openssldir=SYS$MANAGER:[OPENSSL]" "no-shared" "no-module" "no-ssl3" "no-tests" "no-comp" "no-zlib" "no-zlib-dynamic" "--libdir=lib" "no-md2" "no-rc5" "no-weak-ssl-ciphers" "no-camellia" "no-idea" "no-seed" "no-capieng" "no-asm" "VC-WIN64A"
+  cargo:warning=configuring OpenSSL build: Command 'perl' not found. Is perl installed?
+  cargo:warning=openssl-src: failed to build OpenSSL from source
+
+  --- stderr
+
+
+
+  Error configuring OpenSSL build:
+      Command 'perl' not found. Is perl installed?
+      Command failed: "perl" "./Configure" "--prefix=C:/Users/asus/OneDrive/Desktop/Running Node/email-checker/email-checker/target/debug/build/openssl-sys-900ad01ac4c24290/out/openssl-build/install" "--openssldir=SYS$MANAGER:[OPENSSL]" "no-shared" "no-module" "no-ssl3" "no-tests" "no-comp" "no-zlib" "no-zlib-dynamic" "--libdir=lib" "no-md2" "no-rc5" "no-weak-ssl-ciphers" "no-camellia" "no-idea" "no-seed" "no-capieng" "no-asm" "VC-WIN64A"
+
+
+

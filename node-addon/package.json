@@ -1,0 +1,23 @@
+{
+  "name": "check-if-email-exists-node",
+  "version": "0.1.0",
+  "description": "Node.js native addon for check-if-email-exists",
+  "main": "index.ts",
+  "types": "index.ts",
+  "type": "module",
+  "scripts": {
+    "build": "napi build --platform --release",
+    "build:debug": "napi build --platform"
+  },
+  "napi": {
+    "name": "check_if_email_exists_node",
+    "triples": {
+      "defaults": true,
+      "additional": []
+    }
+  },
+  "devDependencies": {
+    "@napi-rs/cli": "^2.18.0"
+  }
+}
+

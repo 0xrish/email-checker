@@ -1,9 +1,0 @@
-C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\check-if-email-exists\target\debug\deps\libicu_normalizer-05e5ca8b4e16bbac.rmeta: C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\icu_normalizer-1.5.0\src\lib.rs C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\icu_normalizer-1.5.0\src\error.rs C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\icu_normalizer-1.5.0\src\properties.rs C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\icu_normalizer-1.5.0\src\provider.rs C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\icu_normalizer-1.5.0\src\uts46.rs
-
-C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\check-if-email-exists\target\debug\deps\icu_normalizer-05e5ca8b4e16bbac.d: C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\icu_normalizer-1.5.0\src\lib.rs C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\icu_normalizer-1.5.0\src\error.rs C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\icu_normalizer-1.5.0\src\properties.rs C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\icu_normalizer-1.5.0\src\provider.rs C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\icu_normalizer-1.5.0\src\uts46.rs
-
-C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\icu_normalizer-1.5.0\src\lib.rs:
-C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\icu_normalizer-1.5.0\src\error.rs:
-C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\icu_normalizer-1.5.0\src\properties.rs:
-C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\icu_normalizer-1.5.0\src\provider.rs:
-C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\icu_normalizer-1.5.0\src\uts46.rs:

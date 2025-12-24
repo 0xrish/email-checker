@@ -1,9 +1,0 @@
-C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\check-if-email-exists\target\debug\deps\librusticata_macros-b137908618300686.rmeta: C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rusticata-macros-4.1.0\src\lib.rs C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rusticata-macros-4.1.0\src\combinator.rs C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rusticata-macros-4.1.0\src\debug.rs C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rusticata-macros-4.1.0\src\macros.rs C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rusticata-macros-4.1.0\src\traits.rs
-
-C:\Users\asus\OneDrive\Desktop\Running Node\email-checker\check-if-email-exists\target\debug\deps\rusticata_macros-b137908618300686.d: C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rusticata-macros-4.1.0\src\lib.rs C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rusticata-macros-4.1.0\src\combinator.rs C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rusticata-macros-4.1.0\src\debug.rs C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rusticata-macros-4.1.0\src\macros.rs C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rusticata-macros-4.1.0\src\traits.rs
-
-C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rusticata-macros-4.1.0\src\lib.rs:
-C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rusticata-macros-4.1.0\src\combinator.rs:
-C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rusticata-macros-4.1.0\src\debug.rs:
-C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rusticata-macros-4.1.0\src\macros.rs:
-C:\Users\asus\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\rusticata-macros-4.1.0\src\traits.rs:

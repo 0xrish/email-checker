@@ -7,7 +7,6 @@
             "title": "Emails to verify",
             "type": "array",
             "description": "List of email addresses to verify. Each address will be validated for syntax, MX records, and SMTP reachability.",
-            "editor": "stringList",
             "items": {
                 "type": "string",
                 "format": "email"
